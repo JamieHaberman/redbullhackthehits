@@ -1,9 +1,4 @@
-boolean movedX = false;
-boolean movedY = false;
-int newX=0;
-int newY=0;
-int oldX=0;
-int oldY=0;
+
 float angle=0;
 color[] colarray = new color[20];
 color[] colarray2 = new color[20];
