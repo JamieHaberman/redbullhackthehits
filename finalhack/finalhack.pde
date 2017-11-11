@@ -115,7 +115,6 @@ for(int i = 0; i< mouseY; i++){
   }
 noFill();
 noStroke();
-  rect(frameCount * frameCount % width, 0, 40, height);
  
 }
      
