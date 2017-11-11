@@ -1,7 +1,7 @@
 import numpy as np
 import time
 import pymouse
-mouse = pymouse.PyMouse()
+ms = pymouse.PyMouse()
 
 notes = {1:130.8, 2:146.8, 3: 164.8, 4: 185, 5:196, 6:220, 7:246.9,
          8:261.6, 9:293.6, 10: 329.6, 11: 370, 12:392, 13:440, 14:523.2}
@@ -46,6 +46,6 @@ while True:
         idx =1
     else:
         old_idx=idx
-        idx = np.searchsorted(x,[mouse.position()[0],],side='right')[0]
-        idxy = np.searchsorted(y,[mouse.position()[1],],side='right')[0]
+        idx = np.searchsorted(x,[ms.position()[0],],side='right')[0]
+        idxy = np.searchsorted(y,[ms.position()[1],],side='right')[0]
         sound = play_sin(frequency=notes[idx],volume=0.1*idxy, duration=duration)        
