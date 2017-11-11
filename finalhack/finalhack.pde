@@ -78,25 +78,21 @@ rect(0,0,width, height);
           col = colarray[0];
       fill(col);
      //  for(int j = 0; j < mouseX%20; j++){
-      println(width-width/17);
       
  
      if (keyPressed) {
     if (keyCode == 16) {
           //background(0,0,0);
-    println("shift1");
       changecolor=true;
 
     }  
     if (keyCode == 17) {
-          println("shift2");
 
 //background(0,0,0);
 changecolor=false;
     }
        if (keyCode == 18) {
 background(0,0,0);
-    println("shift3");
 
 //changecolor=false;
     }
