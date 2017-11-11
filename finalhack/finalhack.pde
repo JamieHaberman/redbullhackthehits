@@ -10,8 +10,8 @@ color[] colarray2 = new color[20];
 boolean changecolor = false;
 int col;
 void setup() {
-    size(1920, 1080);
-        background(0, 0, 0);
+fullScreen();
+background(0, 0, 0);
     colarray[0] = color(#FCF5BB);
     colarray[1] = color(#FCDFA4);
     colarray[2] = color(#FCCD94);
