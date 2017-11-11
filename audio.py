@@ -1,3 +1,4 @@
+from pynput import mouse
 import numpy as np
 import time
 import pymouse
@@ -33,9 +34,17 @@ def play_sin(frequency,volume=0.2,duration=1):
     p.terminate()
 
 idx=-1
+def on_click(x, y, button, pressed):
+    print('{0} at {1}'.format(
+        'Pressed' if pressed else 'Released',
+        (x, y)))
+    if not pressed:
+        # Stop listener
+        return False
 import keyboard
 duration = 1
 while True:
+    with mouse.Listener(on_click=on_click) as listener: listener.join()
     if keyboard.is_pressed('shift'):
         print 'shift pressed'
         duration = 0.5
